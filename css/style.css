@@ -6,3 +6,112 @@
 body {
     font-family: "Work Sans", sans-serif;
 }
+
+.header {
+    background-color: #eee;
+}
+.container {
+    position: relative;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+
+/* header icon and logo style */
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* logo size */
+.header .container .image-logo {
+    width: 80px;
+}
+/* menu */
+.header .container .links {
+    position: relative;
+
+}
+/* creat an icon for showing links */
+.header .container .links .links-icon { 
+    width: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+
+}
+.header .container .links .line  {
+    height: 2px;
+    width: 100%;
+    background-color: #000;
+    margin-bottom: 5px;
+}
+.header .container .links .line2 {
+    width: 60%;
+    transition: .5s;        
+}
+
+.header .container .links:hover .links-icon .line2 {
+    width: 100%;
+}
+
+
+.header .container .menu li a {
+    display: block;
+    color: #333;
+    text-decoration: none;
+    padding: 10px;
+    transition: .5s;
+}
+.header .container .menu li{
+    list-style: none;
+    transition: .5s;
+    border-bottom: #eee solid 1px;
+}
+
+.header .container .menu li:last-child {
+    border-bottom: none; /* Remove border from the last item */
+}
+.header .container .menu li a:hover {
+    padding-left: 20px;
+}
+
+.header .container .menu { 
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #f6f6f6;
+    min-width: 200px;
+    padding: 0;
+    top : 100%;
+    list-style: none;
+}
+
+.header .container .links:hover .menu {
+    display: block;
+}
+.header .container .menu::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    right: 5px;
+    border: solid 10px ;
+    border-color: transparent transparent #f6f6f6 transparent;
+}
